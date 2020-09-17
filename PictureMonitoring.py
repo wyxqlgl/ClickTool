@@ -4,7 +4,6 @@ import os
 import sqlite3
 import time
 from threading import Thread
-
 from pynput import keyboard, mouse
 from pynput.keyboard import Key
 

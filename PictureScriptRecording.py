@@ -1,7 +1,6 @@
 import csv
 import datetime
 import time
-
 import pyautogui
 from PyQt5.QtWidgets import QMessageBox
 #图片执行脚本

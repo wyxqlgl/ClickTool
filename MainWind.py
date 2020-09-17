@@ -3,12 +3,12 @@ import sys
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QHeaderView, QAbstractItemView, QTableWidget
 from qtpy import QtCore
-
 from PictureClicked import pictureClicked #动图定位识别
 from MouthKeyMethod import MouthKeyMethod #键盘鼠标设置
 from ScriptRecording import scriptRecording #录制及执行脚本
 from click import Ui_MainWindow #主页面
 from PictureScreenshot import pictureScreenshot
+
 class mainWind(MouthKeyMethod,scriptRecording,pictureClicked):
     def __init__(self):
         self.contends = ""

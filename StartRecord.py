@@ -1,7 +1,6 @@
 import csv
 import time
 import datetime
-
 import pyautogui
 from PyQt5.QtWidgets import QMessageBox
 class startRecord():

@@ -6,7 +6,6 @@ import time
 from threading import Thread
 from pynput import mouse, keyboard
 from pynput.keyboard import Key
-
 from StartRecord import startRecord
 
 

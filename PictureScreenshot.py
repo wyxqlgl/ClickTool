@@ -2,10 +2,8 @@ import datetime
 import os
 import sqlite3
 import time
-
 import pyautogui
 from PyQt5 import QtCore
-
 from PyQt5.QtCore import QDir, Qt
 from PyQt5.QtGui import QPainter, QBrush, QColor, QPen
 from PyQt5.QtWidgets import QWidget, QFileDialog, QTableWidgetItem, QPushButton, QMenu
