@@ -6,7 +6,7 @@ from ctypes import windll, byref
 from ctypes.wintypes import POINT
 import pyautogui
 from PyQt5.QtWidgets import  QFileDialog, QMessageBox
-
+#键盘鼠标固定操作
 import json
 class MouthKeyMethod():
     def clickMothed(self):
