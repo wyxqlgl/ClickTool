@@ -1,14 +1,14 @@
 import os
 import sys
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow, QHeaderView, QAbstractItemView, QTableWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QHeaderView, QAbstractItemView
 from qtpy import QtCore
+from click import Ui_MainWindow #主页面
 from PictureClicked import pictureClicked #动图定位识别
 from MouthKeyMethod import MouthKeyMethod #键盘鼠标设置
 from ScriptRecording import scriptRecording #录制及执行脚本
-from click import Ui_MainWindow #主页面
 from PictureScreenshot import pictureScreenshot
-
+from MonitoringWind import monitoringWind
 class mainWind(MouthKeyMethod,scriptRecording,pictureClicked):
     def __init__(self):
         self.contends = ""
@@ -17,7 +17,7 @@ class mainWind(MouthKeyMethod,scriptRecording,pictureClicked):
         self.x1 = 0
         self.y2 = 0
         self.x2 = 0
-        self.count = 0
+        self.isPicture=False
         self.dateCount=0
         self.picturename = None
         self.timeStamp=0
@@ -33,6 +33,13 @@ class mainWind(MouthKeyMethod,scriptRecording,pictureClicked):
         self.demo.setWindowState(QtCore.Qt.WindowMaximized)
         self.demo.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.demo.setWindowOpacity(0.3)
+        self.monitoring=monitoringWind(None,self.mainwind,self.click,self.isPicture)
+        self.monitoring.setWindowFlags(QtCore.Qt.CustomizeWindowHint)
+        self.monitoring.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
+        self.monitoring.setWindowFlags(QtCore.Qt.WindowStaysOnBottomHint)
+        self.monitoring.setWindowState(QtCore.Qt.WindowMaximized)
+        self.monitoring.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.monitoring.setWindowOpacity(0.1)
         self.load_config()
         self.loadDb()
         self.click.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)

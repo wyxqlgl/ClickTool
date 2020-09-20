@@ -33,19 +33,19 @@ class startRecord():
         while True:
           pyautogui.scroll(sc*50,x=int(das[3]), y=int(das[4]))
           end = datetime.datetime.now().time().second
-          if end-count >=int(das[8])/1000:
+          if end-count >=int(das[6])/1000:
               break
     def runPress(self,das):
-        time.sleep(int(das[8])/1000)
+        time.sleep(int(das[6])/1000)
         pyautogui.keyDown(str(das[1]).replace("'",""))
     def runRelease(self,das):
-        time.sleep(int(das[8])/1000)
+        time.sleep(int(das[6])/1000)
         pyautogui.keyUp(str(das[1]).replace("'",""))
     def runClick(self,das):
-        time.sleep(int(das[8])/1000)
+        time.sleep(int(das[6])/1000)
         pyautogui.click(x=int(das[3]), y=int(das[4]), clicks=1, interval=0.0, button=str(das[1]).replace("Button.",""), duration=0.0, tween=pyautogui.linear)
     def runMove(self,das):
-        time.sleep(int(das[8])/1000)
+        time.sleep(int(das[6])/1000)
         pyautogui.moveTo(int(das[3]), int(das[4]))
 
 
